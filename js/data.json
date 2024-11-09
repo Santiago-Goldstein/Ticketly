@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "nombre": "Agua de Rosas",
+        "tipo": "Serum Facial",
+        "variedad": "60ml",
+        "precio": 2500,
+        "cantidad": 0,
+        "img": "img1.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Cepillo (Meraki)",
+        "tipo": "Cuidado Bucal",
+        "variedad": "Cerdas suaves",
+        "precio": 1300,
+        "cantidad": 0,
+        "img": "img2.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Cepillo (Meraki)",
+        "tipo": "Cuidado Bucal",
+        "variedad": "Cerdas medias",
+        "precio": 1300,
+        "cantidad": 0,
+        "img": "img3.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Cepillo (Meraki)",
+        "tipo": "Cuidado Bucal",
+        "variedad": "Cerdas duras",
+        "precio": 1300,
+        "cantidad": 0,
+        "img": "img4.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "[COMBO] Shampoo + acondicionador",
+        "tipo": "Cuidado Capilar",
+        "variedad": "120g",
+        "precio": 5300,
+        "cantidad": 0,
+        "img": "img5.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Bálsamo",
+        "tipo": "Cuidado Facial",
+        "variedad": "50g",
+        "precio": 1430,
+        "cantidad": 0,
+        "img": "img6.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Jabonera Individual",
+        "tipo": "Decoración",
+        "variedad": "Madera",
+        "precio": 3000,
+        "cantidad": 0,
+        "img": "img7.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Oleo para puntas",
+        "tipo": "Cuidado Capilar",
+        "variedad": "400ml",
+        "precio": 6000,
+        "cantidad": 0,
+        "img": "img8.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "PAD desmaquillante",
+        "tipo": "Cuidado Facial",
+        "variedad": "1 unidad",
+        "precio": 1400,
+        "cantidad": 0,
+        "img": "img11.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "Acondicionador",
+        "tipo": "Cuidado Capilar",
+        "variedad": "60g",
+        "precio": 2970,
+        "cantidad": 0,
+        "img": "img9.jpg"
+    },
+    {
+        "id": 11,
+        "nombre": "Hilo dental",
+        "tipo": "Cuidado Bucal",
+        "variedad": "1m",
+        "precio": 2070,
+        "cantidad": 0,
+        "img": "img12.jpg"
+    },
+    {
+        "id": 12,
+        "nombre": "[COMBO] PADs desmaquillantes",
+        "tipo": "Cuidado Facial",
+        "variedad": "2 unidades",
+        "precio": 2250,
+        "cantidad": 0,
+        "img": "img13.jpg"
+    },
+    {
+        "id": 13,
+        "nombre": "[COMBO] Conciente",
+        "tipo": "PROMO",
+        "variedad": "PROMO",
+        "precio": 10440,
+        "cantidad": 0,
+        "img": "img14.jpg"
+    },
+    {
+        "id": 14,
+        "nombre": "Esponja Corporal",
+        "tipo": "Cuidado Corporal",
+        "variedad": "30g",
+        "precio": 1500,
+        "cantidad": 0,
+        "img": "img15.jpg"
+    },
+    {
+        "id": 15,
+        "nombre": "Shampoo para cabello SECO",
+        "tipo": "Cuidado Capilar",
+        "variedad": "60g",
+        "precio": 2970,
+        "cantidad": 0,
+        "img": "img16.jpg"
+    },
+    {
+        "id": 16,
+        "nombre": "Shampoo para cabello MIXTO",
+        "tipo": "Cuidado Capilar",
+        "variedad": "60g",
+        "precio": 2970,
+        "cantidad": 0,
+        "img": "img17.jpg"
+    },
+    {
+        "id": 17,
+        "nombre": "Jabonera doble",
+        "tipo": "Decoración",
+        "variedad": "Madera",
+        "precio": 3500,
+        "cantidad": 0,
+        "img": "img18.jpg"
+    },
+    {
+        "id": 18,
+        "nombre": "[COMBO] Jabones x3]",
+        "tipo": "Cuidado Corporal",
+        "variedad": "180g",
+        "precio": 4300,
+        "cantidad": 0,
+        "img": "img19.jpeg"
+    },
+    {
+        "id": 19,
+        "nombre": "Jabon de arcilla",
+        "tipo": "Cuidado Facial",
+        "variedad": "40g",
+        "precio": 2970,
+        "cantidad": 0,
+        "img": "img21.jpeg"
+    },
+    {
+        "id": 20,
+        "nombre": "Bolsas reutilizables individuales",
+        "tipo": "Decoración",
+        "variedad": "3 unidades",
+        "precio": 2000,
+        "cantidad": 0,
+        "img": "img20.jpeg"
+    }
+]
