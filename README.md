@@ -44,3 +44,6 @@ scripts/main.js – Lógica principal para la aplicación.
 - HTML – Estructura de la aplicación.
 - CSS – Estilos y diseño de la interfaz.
 - JavaScript 
+
+## Bootstrap base
+https://startbootstrap.com/previews/shop-homepage
