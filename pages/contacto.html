@@ -1,25 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="sweetalert2.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>KURAKI</title>
+    <title>TICKETLY</title>
 </head>
 
 <body>
     <main>
         <header class="mainHeader">
             <div class="logoContainer">
-                <p>KURAKI</p>
+                <img src="/multimedia/WhatsApp Image 2024-11-01 at 20.11.28.jpeg" alt="Logo Ticketly" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 15px;">
+                    <p>TICKETLY</p>
             </div>
             <div class="navbarContainer">
                 <nav class="navbar">
@@ -40,16 +41,104 @@
                 </div>
             </div>
         </header>
-        <div id="contactoSection2">
-            <h2>CLARIBEL PEREYRA</h2>
-            <img src="../multimedia/git.png" alt="icono"></a>
+
+        <!-- Sección de contacto -->
+        <div id="contactoSection2" class="container my-5">
+            <h2 class="text-center">Queremos Ayudarte</h2>
+            <img src="/multimedia/WhatsApp Image 2024-11-01 at 20.11.28.jpeg" alt="icono" class="logo-pequeño">
+            
+            <!-- Información de contacto y botón de WhatsApp -->
+            <section class="contact-info text-center my-5">
+                <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> ticketly@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> <strong>Telefono:</strong> 11-6747-2996</p>
+                <a href="https://wa.me/1167472996" target="_blank" class="btn btn-success">
+                    <i class="fa-brands fa-whatsapp"></i> Chatea con nosotros en WhatsApp
+                </a>
+            </section>
+
+            <!-- Formulario de contacto -->
+            <section class="contact-form my-5">
+                <h2 class="text-center" style="margin-bottom: 40px;">Envíanos un Mensaje</h2>
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-6">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                        <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" required>
+                        <div class="invalid-feedback">Por favor ingresa un correo electrónico válido.</div>
+                    </div>
+                    <div class="col-12">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                        <div class="invalid-feedback">Por favor ingresa tu mensaje.</div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button class="btn btn-primary" type="submit">Enviar Mensaje</button>
+                    </div>
+                </form>
+            </section>
         </div>
+        
+        <script>
+            // Validación de formulario y redirección a WhatsApp
+            (() => {
+                'use strict'
+                const forms = document.querySelectorAll('.needs-validation')
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        } else {
+                            // Obtener los datos del formulario
+                            const nombre = document.getElementById('nombre').value;
+                            const email = document.getElementById('email').value;
+                            const mensaje = document.getElementById('mensaje').value;
+        
+                            // Crear el mensaje que se enviará a través de WhatsApp
+                            const mensajeWhatsApp = `*Nombre:* ${nombre}%0A*Email:* ${email}%0A*Mensaje:* ${mensaje}`;
+                            
+                            // Enlace de WhatsApp con el mensaje predefinido
+                            const urlWhatsApp = `https://wa.me/1167472996?text=${mensajeWhatsApp}`;
+        
+                            // Redirigir al enlace de WhatsApp
+                            window.location.href = urlWhatsApp;
+                            event.preventDefault(); // Prevenir el envío del formulario convencional
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+            })()
+        </script>
+
     </main>
+
     <footer>
-        <div class="footerTexto"><p>CP - CODERHOUSE 2023</p>
+        <div class="footerTexto">
+            <p>Ticketly Copyright@ Todos los derechos reservados</p>
         </div>
     </footer>
-    <!-- bootstrap -->
+
+    <!-- Scripts de Bootstrap y validación de formulario -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script>
+        // Validación de formulario
+        (() => {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
 </body>
 </html>
