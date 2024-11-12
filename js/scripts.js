@@ -74,7 +74,7 @@ function mostrarCatalogo(array) {
     for (let elem of array) {
         let nuevoProducto = document.createElement("div")
         nuevoProducto.innerHTML = `<div id="${elem.id}" class="card" style="width: 18rem;">
-            <img class="card-img-top img-fluid" style="height: 200px;"src="./multimedia/${elem.img}" alt="${elem.nombre} de ${elem.tipo}">
+            <img class="card-img-top img-fluid" style="height: 200px;"src="/multimedia/${elem.img}" alt="${elem.nombre} de ${elem.tipo}">
             <div class="card-body">
                 <h4> Nº ${elem.id}</h4>
                 <h4 class="card-title">${elem.nombre}</h4>
@@ -225,7 +225,7 @@ function cargarProductosCarrito(array) {
     array.forEach((producto) => {
         modalBodyCarrito.innerHTML += `
         <div class="card" id="productoCarrito${producto.id}" style="width: 80%; margin: auto; margin-bottom: 5%;">
-        <img src="./multimedia/${producto.img}" class="card-img-top" alt="...">
+        <img src="/multimedia/${producto.img}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">${producto.nombre}</h5>
             <h6 class="card-id">Nº ${producto.id}</h6>
@@ -323,3 +323,36 @@ setTimeout(() => {
     loader.innerHTML = ""
     mostrarCatalogo(eshop)
 }, 1000);
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Verificar si el usuario está logueado
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    // Rutas que deberían estar protegidas
+    const protectedRoutes = ['/pages/menu_usuario.html', '/pages/contacto.html'];
+
+    // Verificar si el usuario está logueado
+    if (isLoggedIn) {
+        // Si el usuario está logueado, redirigir si está en la página de inicio (index.html)
+        if (window.location.pathname === '/index.html') {
+            window.location.href = '/pages/menu_usuario.html';
+        }
+    } else {
+        // Si el usuario no está logueado, redirigir a index.html si está en una página protegida
+        if (protectedRoutes.includes(window.location.pathname)) {
+            window.location.href = '/index.html';
+        }
+    }
+});
+
+// Escuchar el botón de logout
+const logoutBtn = document.getElementById("logoutBtn");
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", function() {
+        // Eliminar el estado de sesión de localStorage
+        localStorage.removeItem("isLoggedIn");
+        // Redirigir al usuario a la página de inicio de sesión
+        window.location.href = '/index.html';
+    });
+}

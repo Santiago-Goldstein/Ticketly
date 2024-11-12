@@ -12,20 +12,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>KURAKI</title>
+    <title>Registro</title>
 </head>
 
 <body>
     <main>
         <header class="mainHeader">
             <div class="logoContainer">
-                <p>KURAKI</p>
+                <p>TICKETLY</p>
             </div>
             <div class="navbarContainer">
                 <nav class="navbar">
                     <ul>
                         <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li><a href="/pages/contacto.html">Contacto</a></li>
+                        <li><a href="/pages/login.html">Iniciar Sesión</a></li>
                     </ul>
                 </nav>
                 <div class="hamburger-menu">
@@ -35,22 +36,42 @@
                     </label>
                     <ul class="menu__box">
                         <li><a class="menu__item" href="../index.html">Inicio</a></li>
-                        <li><a class="menu__item" href="#">Contacto</a></li>
+                        <li><a class="menu__item" href="/pages/contacto.html">Contacto</a></li>
+                        <li><a class="menu__item" href="/pages/login.html">Iniciar Sesión</a></li>
                     </ul>
                 </div>
             </div>
         </header>
-        <div id="contactoSection2">
-            <h2>CLARIBEL PEREYRA</h2>
-            <img src="../multimedia/git.png" alt="icono"></a>
+        <div class="register-container">
+            <h2 class="register-title">Regístrate</h2>
+            <form class="register-form">
+                <div class="form-group">
+                    <label for="username"><i class="fas fa-user"></i> Usuario</label>
+                    <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i> Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword"><i class="fas fa-lock"></i> Confirmar contraseña</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirma tu contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Registrarse</button>
+            </form>
         </div>
     </main>
     <footer>
-        <div class="footerTexto"><p>CP - CODERHOUSE 2023</p>
+        <div class="footerTexto">
+            <p>Ticketly Copyright@ Todos los derechos reservados</p>
         </div>
     </footer>
-    <!-- bootstrap -->
+
+    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- SweetAlert2 para los mensajes de error -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/register.js"></script>
     <!-- script -->
     <script src="/js/scripts.js"></script>
 </body>
