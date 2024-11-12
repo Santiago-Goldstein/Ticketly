@@ -562,6 +562,16 @@
   #contactoSection2 a:hover img {
     transform: scale(1.05);
   }
+  .logo-pequeño {
+    width: 100%;          
+    object-fit: contain;
+    height: 250px;        
+    object-fit: cover;    
+    display: block;
+    margin-top: 30px;
+    padding: 0;
+    border-radius: 50px;
+}
   
   @media only screen and (min-width: 769px) {
     .hamburger-menu {
