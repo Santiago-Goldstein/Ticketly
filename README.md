@@ -24,7 +24,7 @@ $ cd ticketera-shows
 
 2) Ejecuta la aplicación
 
-- No es necesario ningún servidor adicional. Simplemente tenés que abrir el archivo index.html en tu navegador. 
+- Es necesario encender un servidor. Para iniciarlo ve a la carpeta /server en la terminal y escribe: python app.py... Listo!, solo abre el index.html.
 - Si prefieres un servidor local para desarrollo, puedes utilizar Live Server en VS Code o ejecutar el siguiente comando en tu terminal:
 
 ```bash
