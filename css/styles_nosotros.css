@@ -1,4 +1,4 @@
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -86,114 +86,6 @@
     color: #666;
   }
   
-  .register-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 2rem;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-
-  .register-title {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.8rem;
-    color: #343a40;
-    margin-bottom: 1rem;
-  }
-
-  .register-form {
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .register-form .form-group {
-    margin-bottom: 1.2rem;
-    text-align: left;
-  }
-
-  .register-form input {
-    width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-  }
-
-  .btn-primary {
-    width: 100%;
-    padding: 0.6rem;
-    font-size: 1rem;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    cursor: pointer;
-  }
-
-  .btn-primary:hover {
-      background-color: #0056b3;
-  }
-
-  .login-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 2rem;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-
-  .login-title {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.8rem;
-    color: #343a40;
-    margin-bottom: 1rem;
-  }
-
-  .login-form .form-group {
-    margin-bottom: 1.2rem;
-    text-align: left;
-  }
-
-  .login-form label {
-    font-size: 0.9rem;
-    color: #495057;
-  }
-
-  .login-form input {
-    width: 100%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-  }
-
-  .login-form input:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-
-  .login-form .btn-primary {
-    width: 100%;
-    padding: 0.6rem;
-    font-size: 1rem;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    cursor: pointer;
-  }
-
-  .login-form .btn-primary:hover {
-    background-color: #0056b3;
-  }
-    
   .menu__box {
     display: flex;
     flex-direction: column;
@@ -562,16 +454,6 @@
   #contactoSection2 a:hover img {
     transform: scale(1.05);
   }
-  .logo-pequeño {
-    width: 100%;          
-    object-fit: contain;
-    height: 250px;        
-    object-fit: cover;    
-    display: block;
-    margin-top: 30px;
-    padding: 0;
-    border-radius: 50px;
-}
   
   @media only screen and (min-width: 769px) {
     .hamburger-menu {
@@ -684,4 +566,31 @@
     #contactoSection2 {
       min-height: 72vh;
     }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+  }
+  .footer {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+  }
+  .footer .social-icons a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 20px;
+      text-decoration: none;
+  }
+  .footer .links a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 14px;
+  }
+  .footer .address, .footer .copyright {
+      font-size: 12px;
+      margin-top: 10px;
+  }
   }/*# sourceMappingURL=styles.css.map */

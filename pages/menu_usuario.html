@@ -11,22 +11,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>KURAK</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>TICKETLY</title>
 </head>
 <body>
     <main>
         <header class="mainHeader">
             <div class="logoContainer">
-                <p>KURAKI STYLE</p>
+                <p>TICKETLY</p>
             </div>
             <div class="navbarContainer">
                 <nav class="navbar">
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="./pages/contacto.html">Contacto</a></li>
-                        <li><a href="./pages/login.html">Iniciar Sesión</a></li>
-                        <li><a href="./pages/register.html">Registrarse</a></li>
+                        <li><a href="/pages/menu_usuario.html">Inicio</a></li>
+                        <li><a href="/pages/contacto.html">Contacto</a></li>                     
+                        <li><button id="logoutBtn">Cerrar Sesión</button>
                         <li><button type="button" id="btnCarrito3" class="btn bn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-cart-shopping"></i></button></li>
                     </ul>
                 </nav>
@@ -37,8 +36,8 @@
                         <span></span>
                     </label>
                     <ul class="menu__box">
-                        <li><a class="menu__item" href="#">Inicio</a></li>
-                        <li><a class="menu__item" href="./pages/contacto.html">Contacto</a></li>
+                        <li><a class="menu__item" href="/pages/menu_usuario.html">Inicio</a></li>
+                        <li><a class="menu__item" href="/pages/contacto.html">Contacto</a></li>
                         <li><button type="button" id="btnCarrito" class="btn btn-primary menu__item" data-bs-toggle="modal" data-bs-target="#exampleModal">Carrito </button></li>
                     </ul>
                 </div>
@@ -114,6 +113,6 @@
     <!-- sweet alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- script -->
-    <script src="./js/scripts.js"></script>
+    <script src="/js/scripts.js"></script>
 </body>
 </html>
