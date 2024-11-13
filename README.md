@@ -22,9 +22,14 @@ $ git clone https://github.com/tu_usuario/ticketera-shows.git
 $ cd ticketera-shows
 ```
 
-2) Ejecuta la aplicación
+2) Descarga la libreria Flask:
 
-- Es necesario encender un servidor. Para iniciarlo ve a la carpeta /server en la terminal y escribe: python app.py... Listo!, solo abre el index.html.
+- Windows: pip install flask
+- Mac: pip3 install flask (En mac algunas veces hay que descargar una libreria adicional para permisos CORS) - pip3 install flask-cors
+
+3) Ejecuta la aplicación
+
+- Es necesario encender un servidor, para iniciarlo ve a la carpeta /server en la terminal y escribe: python app.py... Listo!, solo abre el index.html.
 - Si prefieres un servidor local para desarrollo, puedes utilizar Live Server en VS Code o ejecutar el siguiente comando en tu terminal:
 
 ```bash
@@ -35,15 +40,19 @@ npx http-server .
 
 ## 📁 Estructura del Proyecto
 index.html – Página principal de la aplicación.
-styles/ – Carpeta que contiene los archivos CSS para el diseño de la aplicación.
-styles/main.css – Estilos principales.
-scripts/ – Carpeta que contiene los archivos JavaScript para la funcionalidad.
-scripts/main.js – Lógica principal para la aplicación.
+css/ – Carpeta que contiene los archivos CSS para el diseño de la aplicación.
+css/styles.css – Estilos principales.
+js/ – Carpeta que contiene los archivos JavaScript para la funcionalidad.
+js/scripts.js – Lógica principal para la aplicación.
+pages/ – Carpeta que contiene las páginas de la web.
+pages/menu_usuario.html – Página de usuario logueado.
+server/ – Carpeta que contiene el servidor flask y la base de datos de usuarios
 
 ## 🧑‍💻 Tecnologías Utilizadas
 - HTML – Estructura de la aplicación.
 - CSS – Estilos y diseño de la interfaz.
-- JavaScript 
+- JavaScript – Lógica para la aplicación.
+- Python – Servidor flask.
 
 ## Bootstrap base
 https://startbootstrap.com/previews/shop-homepage
