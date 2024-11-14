@@ -19,48 +19,41 @@
 <body>
 
     <header class="mainHeader">
-        <div class="logoContainer">
-            <img src="/multimedia/logo.jpeg" alt="Logo Ticketly" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 15px;">
+        <div class="nav-content">
+            <div class="logo">
+                <img src="../multimedia/logo.jpeg" alt="Logo Ticketly">
                 <p>TICKETLY</p>
-        </div>
-        <div class="navbarContainer">
+            </div>
             <nav class="navbar">
-                <ul>
+                <ul class="navbar-links">
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="login.html">Iniciar Sesión</a></li>
-                    <li><a href="register.html" class="navbar-btn register-btn">Registrarse</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <ll><a href="contacto.html">Contactate</a></ll>
                 </ul>
             </nav>
-            <div class="hamburger-menu">
-                <input id="menu__toggle" type="checkbox" />
-                <label class="menu__btn" for="menu__toggle">
-                <button type="button" id="btnCarrito2" class="btn btn-outline-secondary btnCarrito" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <span></span>
-                </label>
-                <ul class="menu__box">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="login.html">Iniciar Sesión</a></li>
-                    <li><a href="register.html">Registrate</a></li>
-                </ul>
+            <div class="nav-buttons">
+                <button class="btn-secondary" onclick="window.location.href='login.html'">Iniciar sesión</button>
+                <button class="btn-primary" onclick="window.location.href='register.html'">Regístrate</button>
+                <button class="cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal">
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
             </div>
         </div>
     </header>
 
-    <section class="section1">
-        <div class="section1TextContainer">
-            <h2>UN POCO DE HISTORIA</h2>
-            <p>Quiénes somos y de dónde venimos</p>
-        </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>NUESTRA HISTORIA</h1>
+            <p>Te contamos un poco cómo empezamos y quiénes somos</p>
+    
     </section>
-
+    
     <section class="section2">
         <div class="barraHerramientas" id="herramientas">
             <div class="divOrdenar">
                 <div class="divTitulo">
                     <h2>¿Cómo inició?</h2>
-                    <p>
+                    <p class="prueba">
                         Ticketly App nació en 2020, cuando un grupo de amigos apasionados por la tecnología y los eventos soñaba con hacer más accesible y amigable la compra de entradas. Con años de experiencia en la industria y frustrados por los obstáculos que enfrentaban los usuarios al adquirir entradas, decidieron transformar la experiencia creando una plataforma innovadora.
                         La misión de Ticketly siempre ha sido ofrecer una experiencia rápida, segura y sin complicaciones para todo tipo de eventos, desde conciertos y espectáculos deportivos hasta talleres y conferencias. La aplicación comenzó con eventos locales, pero pronto creció, expandiéndose a nivel nacional gracias a su facilidad de uso y un enfoque en la satisfacción del cliente.
                         Hoy, Ticketly App se ha convertido en el aliado preferido de promotores y asistentes, revolucionando la forma en que el público accede a los eventos que ama.
@@ -69,6 +62,64 @@
             </div>
         </div>
     </section>
+
+
+    <section class="team-section">
+        <h2>Conoce a Nuestro Equipo</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <div class="image-container">
+                    <img src="../multimedia/clari.jfif" alt="Foto de desarrollador 1">
+                    <div class="overlay">Claribel Pereyra - Desarrolladora Frontend</div>
+                </div>
+                <div class="member-info">
+                    <h3>Claribel Pereyra</h3>
+                    <p>Desarrolladora Frontend</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="image-container">
+                    <img src="foto2.jpg" alt="Foto de desarrollador 2">
+                    <div class="overlay">Guido Alongi - Tester</div>
+                </div>
+                <div class="member-info">
+                    <h3>Guido Alongi</h3>
+                    <p>Tester</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="image-container">
+                    <img src="../multimedia/agus.jpeg" alt="Foto de desarrollador 3">
+                    <div class="overlay">Agustin Goldstein - Diseñador UX/UI</div>
+                </div>
+                <div class="member-info">
+                    <h3>Agustin Goldstein</h3>
+                    <p>Diseñador UX/UI</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="image-container">
+                    <img src="../multimedia/santi.jpeg" alt="Foto de desarrollador 4">
+                    <div class="overlay">Santiago Goldstein - Desarrollador Backend</div>
+                </div>
+                <div class="member-info">
+                    <h3>Santiago Goldstein</h3>
+                    <p>Desarrollador Backend</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="image-container">
+                    <img src="/multimedia/meli.jpeg" alt="Foto de desarrollador 4">
+                    <div class="overlay">Melina Barrón - Diseñador UX/UI</div>
+                </div>
+                <div class="member-info">
+                    <h3>Melina Barrón</h3>
+                    <p>Diseñador UX/UI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <footer class="footer">
         <div class="social-icons">
@@ -84,7 +135,7 @@
             Humboldt 450 | Villa Crespo, Ciudad Autónoma de Buenos Aires, Argentina
         </div>
         <div class="copyright">
-            Copyright © 2024, Movistar Arena. Todos los derechos reservados.
+            Copyright © 2024, Ticketly. Todos los derechos reservados.
         </div>
     </footer>
 
