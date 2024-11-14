@@ -1,0 +1,87 @@
+body {
+    color: #e9e9e5;
+    background-color: #191c18;
+    font-family: 'Raleway', sans-serif;
+}
+
+.section1 {
+    background-color: #2a2d29;
+    color: #e9e9e5;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section1TextContainer h2 {
+    font-size: 2.5rem;
+}
+
+.section1TextContainer p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.section2 {
+    background-color: #2a2d29;
+    color: #e9e9e5;
+    padding: 30px 20px;
+}
+
+.barraHerramientas {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.divOrdenar {
+    background-color: #2a2d29;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.divTitulo h2 {
+    font-size: 2rem;
+    color: #e9e9e5;
+    margin-bottom: 20px;
+}
+
+.divTitulo p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer {
+    background-color: #2a2d29;
+    padding: 20px;
+    color: #e9e9e5;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.social-icons a {
+    color: #e9e9e5;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #e44d5a;
+}
+
+.links a {
+    color: #e9e9e5;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: #e44d5a;
+}
+
+.address {
+    margin-top: 15px;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
