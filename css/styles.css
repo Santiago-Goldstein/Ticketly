@@ -504,3 +504,8 @@ body {
   border-radius: 10px;
   padding: 20px;
 }
+
+
+.myTickets {
+    margin-top: 100px; /* Ajusta el valor según sea necesario */
+}
