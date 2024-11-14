@@ -49,23 +49,6 @@ body {
     font-size: 0.8rem;
 }
 
-/* Barra de navegación */
-.navbarContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar a {
-    color: #e9e9e5;
-    text-decoration: none;
-    padding: 10px;
-    transition: color 0.3s;
-}
-
-.navbar a:hover {
-    color: #e44d5a;
-}
 
 .hamburger-menu {
     display: none;
