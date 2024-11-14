@@ -122,6 +122,14 @@
                                         <button class="ticket-btn">TICKETS A LA VENTA</button>
                                     </div>
                                 </div>
+                                <div class="show-card">
+                                    <img src="../multimedia/events/duki.png" alt="duki">
+                                    <div class="show-info">
+                                        <h3>DUKI</h3>
+                                        <p>VELEZ SARFIELD</p>
+                                        <button class="ticket-btn">TICKETS A LA VENTA</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
@@ -131,91 +139,45 @@
                     </div>
         </section>
 
-        <section class="all-events">
-            <div class="container">
-                <h2>Todos los Eventos</h2>
-                <div class="events-filter">
-                    <button class="filter-btn active" data-filter="all">Todos</button>
-                    <button class="filter-btn" data-filter="rock">Rock</button>
-                    <button class="filter-btn" data-filter="pop">Pop</button>
-                    <button class="filter-btn" data-filter="electronic">Electrónica</button>
-                </div>
-                
-                <div class="events-grid">
-                    <div class="event-card" data-category="rock">
-                        <img src="../multimedia/events/event2.jpg" alt="Evento Rock">
-                        <div class="event-details">
-                            <h3>Guns N' Roses</h3>
-                            <p class="event-venue">Vélez Sarsfield</p>
-                            <div class="event-meta">
-                                <span><i class="fas fa-calendar"></i> 15 Dic 2024</span>
-                                <span><i class="fas fa-ticket-alt"></i> Desde $15000</span>
-                            </div>
-                            <button class="btn-primary">Comprar Tickets</button>
+        <!-- Después del carrusel -->
+<section class="all-events">
+    <h2 class="section-title">Todos los Eventos</h2>
+    <div class="filter-buttons">
+        <button class="filter-btn active">Todos</button>
+        <button class="filter-btn">Rock</button>
+        <button class="filter-btn">Pop</button>
+        <button class="filter-btn">Electrónica</button>
+    </div>
+    
+    <div class="events-grid">
+        <div class="event-card glass-effect">
+            <div class="event-content">
+                <img src="../multimedia/events/gnr.jpg" alt="Guns N' Roses" class="event-image">
+                <div class="event-info">
+                    <h3>Guns N' Roses</h3>
+                    <div class="event-details">
+                        <div class="venue">Vélez Sarsfield</div>
+                        <div class="meta-info">
+                            <span class="date">15 Dic 2024</span>
+                            <span class="price">Desde $15000</span>
+                            <button class="ticket-btn">Comprar Tickets</button>
                         </div>
                     </div>
-                    <!-- Repite para otros eventos -->
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <section class="destinations">
-            <h2>Destinos populares</h2>
-            <div class="destination-grid">
-                <div class="destination-card">
-                    <img src="/multimedia/events/concert1.jpg" alt="Concierto de rock">
-                    <div class="card-overlay">
-                        <h3>Rock</h3>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img src="/multimedia/events/concert2.jpg" alt="Festival electrónico">
-                    <div class="card-overlay">
-                        <h3>Electrónica</h3>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img src="/multimedia/events/concert3.jpg" alt="Concierto pop">
-                    <div class="card-overlay">
-                        <h3>Pop</h3>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <img src="/multimedia/events/concert4.jpg" alt="Jazz en vivo">
-                    <div class="card-overlay">
-                        <h3>Jazz</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="venues">
-            <h2>Lugares destacados</h2>
-            <div class="venue-grid">
-                <div class="venue-card glass-effect">
-                    <div class="venue-rating">9.5</div>
-                    <img src="/multimedia/symphony.jpg" alt="Symphony Hall">
-                    <div class="venue-info">
-                        <h3>Symphony Hall</h3>
-                        <p>New York</p>
-                        <p class="price">desde $50/ticket</p>
-                    </div>
-                </div>
-                <!-- Repite para otros venues -->
-            </div>
-        </section>
-
-        <section class="club-banner glass-effect">
-            <div class="banner-content">
-                <div class="ticket-icon">🎫</div>
-                <div class="banner-text">
-                    <h3>¡Shh!</h3>
-                    <p>¿Querés acceso exclusivo a preventas y paquetes VIP? ¡Unite a nuestro Club ahora!</p>
-                </div>
-                <button class="btn-primary">Unirse al Club</button>
-            </div>
-        </section>
-    </main>
+<section class="join-club">
+    <div class="club-content">
+        <h2>¡Shh!</h2>
+        <p>¿Querés acceso exclusivo a preventas y paquetes VIP? ¡Unite a nuestro Club ahora!</p>
+        <button class="club-btn">Unirse al Club</button>
+    </div>
+</section>
+</body>
+</main>
 
     <!-- Mantén tu footer actual -->
 
