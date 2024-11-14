@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     });
 
                     // Redirigir a menu_usuario.html
-                    window.location.href = "/pages/menu_usuario.html";
+                    window.location.href = "menu_usuario.html";
                 } else {
                     Swal.fire({
                         icon: 'error',
