@@ -17,46 +17,28 @@
     <title>Iniciar Sesión</title>
 </head>
 <body>
-    <header class="mainHeader">
-        <div class="nav-content">
-            <div class="logo">
-                <a href="/">Ticketly</a>
-            </div>
-            
-            <nav class="navbar">
-                <ul class="navbar-links">
-                    <li><a href="/pages/index.html">Inicio</a></li>
-                    <li><a href="/pages/contacto.html">Contacto</a></li>
-                    <li><a href="/pages/nosotros.html">Nosotros</a></li>
-                    <li><a href="/pages/login.html">Iniciar sesión</a></li>
-                    <li><a href="/pages/register.html">registrarse</a></li>
-                </ul>
-            </nav>
-            
-            <div class="nav-buttons">
-                <a href="/pages/login.html" class="btn-secondary">Iniciar Sesión</a>
-                <a href="/pages/register.html" class="btn-primary">Registrarse</a>
-                <button class="cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal">
-                    <i class="fas fa-shopping-cart"></i>
-                </button>
-            </div>
+<header class="mainHeader">
+    <div class="nav-content">
+        <div class="logo">
+            <img src="../multimedia/logo.jpeg" alt="Logo Ticketly">
+            <p>TICKETLY</p>
         </div>
-        <!-- Menú móvil -->
-        <div class="hamburger-menu">
-            <input id="menu__toggle" type="checkbox">
-            <label class="menu__btn" for="menu__toggle">
-                <span></span>
-            </label>
-            <ul class="menu__box">
-                <li><a class="menu__item" href="/pages/events.html">Eventos</a></li>
-                <li><a class="menu__item" href="/pages/venues.html">Lugares</a></li>
-                <li><a class="menu__item" href="/pages/about.html">Nosotros</a></li>
-                <li><a class="menu__item" href="/pages/contact.html">Contacto</a></li>
-                <li><a class="menu__item" href="/pages/login.html">Iniciar Sesión</a></li>
-                <li><a class="menu__item" href="/pages/register.html">Registrarse</a></li>
+        <nav class="navbar">
+            <ul class="navbar-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <ll><a href="contacto.html">Contactate</a></ll>
             </ul>
+        </nav>
+        <div class="nav-buttons">
+            <button class="btn-secondary" onclick="window.location.href='login.html'">Iniciar sesión</button>
+            <button class="btn-primary" onclick="window.location.href='register.html'">Regístrate</button>
+            <button class="cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal">
+                <i class="fas fa-shopping-cart"></i>
+            </button>
         </div>
-    </header>
+    </div>
+</header>
 
     <main>
         <div class="login-container">
@@ -108,21 +90,13 @@
     <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <h3>RecitalTick</h3>
+                <h3>Ticketly</h3>
                 <p>Tu destino para los mejores eventos musicales</p>
             </div>
             <div class="footer-links">
                 <div class="footer-section">
-                    <h4>Explorar</h4>
-                    <a href="/pages/events.html">Eventos</a>
-                    <a href="/pages/venues.html">Lugares</a>
-                    <a href="/pages/about.html">Nosotros</a>
-                </div>
-                <div class="footer-section">
                     <h4>Soporte</h4>
                     <a href="/pages/contacto.html">Contacto</a>
-                    <a href="/pages/faq.html">FAQ</a>
-                    <a href="/pages/terms.html">Términos</a>
                 </div>
                 <div class="footer-section">
                     <h4>Síguenos</h4>
@@ -133,21 +107,11 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Ticketly. Todos los derechos reservados.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ticketly. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
-
-    <!-- Floating Buttons -->
-    <div class="floating-buttons">
-        <button class="float-btn" id="cartBtn" data-bs-toggle="modal" data-bs-target="#cartModal">
-            <i class="fas fa-shopping-cart"></i>
-        </button>
-        <a href="#" class="float-btn" id="topBtn">
-            <i class="fas fa-arrow-up"></i>
-        </a>
-    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
