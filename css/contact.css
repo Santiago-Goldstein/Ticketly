@@ -1,0 +1,96 @@
+
+body {
+    color: #e9e9e5; 
+    background-color: #191c18;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+a {
+    color: #e9e9e5; /* Color del texto de los enlaces */
+}
+
+a:hover {
+    color: #e44d5a; /* Color al pasar el mouse sobre el enlace */
+}
+
+/* Botón de WhatsApp */
+.btn-success {
+    background-color: #e44d5a; /* Fondo del botón */
+    border-color: #e44d5a; /* Borde del botón */
+}
+
+.btn-success:hover {
+    background-color: #c7404d; /* Fondo del botón al pasar el mouse */
+    border-color: #c7404d; /* Borde del botón al pasar el mouse */
+}
+
+/* Estilo de los botones en el formulario */
+.btn-primary {
+    background-color: #e44d5a; /* Fondo de los botones */
+    border-color: #e44d5a; /* Borde de los botones */
+}
+
+.btn-primary:hover {
+    background-color: #c7404d; /* Fondo del botón al pasar el mouse */
+    border-color: #c7404d; /* Borde del botón al pasar el mouse */
+}
+
+/* Iconos */
+i {
+    color: #e44d5a; /* Color de los iconos */
+}
+
+i:hover {
+    color: #c7404d; /* Color de los iconos al pasar el mouse */
+}
+
+/* Estilo del texto del footer */
+footer .footerTexto p {
+    color: #e9e9e5; /* Color del texto en el footer */
+}
+
+.logo-pequeño {
+    width: 100%;          
+    object-fit: contain;
+    height: 250px;        
+    object-fit: cover;    
+    display: block;
+  }
+
+/* Estilo para las cabeceras (h1, h2, h3) */
+h2, h3 {
+    color: #e9e9e5; /* Color de las cabeceras */
+}
+
+/* Estilo del formulario */
+.contact-form .form-label,
+.contact-info p {
+    color: #e9e9e5; /* Color de las etiquetas y párrafos */
+}
+
+.contact-form .form-control {
+    border: 1px solid #e44d5a; /* Borde de los inputs */
+}
+
+.contact-form .form-control:focus {
+    border-color: #e44d5a; /* Borde de los inputs cuando están en foco */
+}
+
+/* Hacer el footer fijo */
+footer {
+    background-color: #191c18; /* Fondo negro */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer .footerTexto p {
+    margin: 0;
+    color: #e9e9e5; /* Color del texto en el footer */
+}
+
+/* Asegurarse de que el contenido principal tenga espacio suficiente para el footer fijo */
+main {
+    padding-bottom: 60px; /* Espacio para el footer fijo */
+}

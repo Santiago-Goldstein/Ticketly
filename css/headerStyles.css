@@ -1,0 +1,228 @@
+/* Header fijo */
+.mainHeader {
+    height: 10vh; /* Altura del header */
+    width: 100%;  /* El header ocupa todo el ancho de la pantalla */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #2f342d;
+    justify-content: center;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegura que el header quede por encima del contenido */
+    padding: 0 20px; /* Espaciado en los laterales */
+}
+
+/* Ocultar elementos del header en pantallas pequeñas (menú y logo) */
+.mainHeader .logoContainer {
+    display: none;
+}
+
+.mainHeader .navbar {
+    display: none;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+/* Transformación del menú hamburguesa cuando el checkbox está marcado */
+#menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+
+#menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+}
+
+/* Estilo para el botón hamburguesa */
+.menu__btn {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* Estilos para las barras del botón hamburguesa */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #666;
+    transition-duration: 0.25s;
+}
+
+.menu__btn > span::before {
+    content: "";
+    top: -8px;
+}
+
+.menu__btn > span::after {
+    content: "";
+    top: 8px;
+}
+
+/* Menú desplegable */
+.menu__box {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+/* Estilos para los elementos del menú desplegable */
+.menu__box li {
+    margin: 10px 0;
+}
+
+.menu__item {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.menu__item:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Mostrar el menú desplegable cuando el checkbox está marcado */
+#menu__toggle:checked ~ .menu__box {
+    display: block;
+}
+
+/* Espaciado para el contenido que sigue el header (para no taparlo) */
+body {
+    padding-top: 10vh; /* Ajusta según la altura del header */
+}
+
+@media only screen and (min-width: 769px) {
+    .hamburger-menu {
+      display: none;
+    }
+    .mainHeader {
+      height: 10vh;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background: #2f342d;
+      justify-content: flex-start;
+    }
+    .mainHeader .logoContainer {
+      display: flex;
+      width: 25%;
+      align-items: center;
+      justify-content: center;
+    }
+    .mainHeader .logoContainer p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      margin: 0;
+      font-weight: 800;
+      color: #e9e9e5;
+      letter-spacing: 3px;
+    }
+    .mainHeader .navbarContainer {
+      display: flex;
+      width: 75%;
+      height: 100%;
+    }
+    .mainHeader .navbarContainer .navbar {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      padding: 0 0 0 50%;
+    }
+    .mainHeader .navbarContainer .navbar ul {
+      display: flex;
+      width: 100%;
+      height: auto;
+      margin: 0 20px;
+      padding: 0;
+      list-style: none;
+      gap: 40px;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .mainHeader .navbarContainer .navbar ul li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .mainHeader .navbarContainer .navbar ul li #btnCarrito3 {
+      color: #e9e9e5;
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+    .mainHeader .navbarContainer .navbar ul li #btnCarrito3 i {
+      font-size: 18px;
+    }
+  
+    .mainHeader .navbarContainer .navbar ul li #btnCarrito3:hover {
+      background-color: #e9e9e5;
+      color: #e44d5a;
+    }
+    .mainHeader .navbarContainer .navbar ul li a {
+      color: #e9e9e5;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding: 10% 0 10% 0;
+      transition: 0.5s;
+      border-radius: 5px;
+    }
+    .mainHeader .navbarContainer .navbar ul li a:hover {
+      background-color: #cd666e;
+      color: #e9e9e5;
+      margin: 5px;
+    }
+    .section1TextContainer {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      align-items: center;
+      justify-content: center;
+    }
+    .section1TextContainer h2 {
+      margin: 0;
+    }
+    .section1TextContainer p {
+      padding: 0 0 0 0;
+    }
+    .up {
+      display: block;
+    }
+  }

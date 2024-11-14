@@ -12,7 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-    <title>TICKETLY</title>
+    <link rel="stylesheet" href="../css/headerStyles.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <title>CONTACTO</title>
 </head>
 
 <body>
@@ -26,8 +28,8 @@
                 <nav class="navbar">
                     <ul>
                         <li><a href="/index.html">Inicio</a></li>
-                        <li><a href="./pages/contacto.html">Contacto</a></li>
-                        <li><a href="./pages/login.html" class="navbar-btn login-btn">Iniciar Sesión</a></li>
+                        <li><a href="./pages/nosotros.html">Sobre nosotros</a></li>
+                        <li><a href="./pages/login.html">Iniciar Sesión</a></li>
                         <li><a href="./pages/register.html" class="navbar-btn register-btn">Registrarse</a></li>
                         <li><button type="button" id="btnCarrito3" class="btn bn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-cart-shopping"></i></button></li>
                     </ul>
@@ -39,11 +41,10 @@
                         <span></span>
                     </label>
                     <ul class="menu__box">
-                        <li><a class="menu__item" href="/index.html">Inicio</a></li>
-                        <li><a class="menu__item" href="./pages/contacto.html">Contacto</a></li>
-                        <li><a class="menu__item" href="./pages/login.html">Iniciar Sesión</a></li>
-                        <li><a class="menu__item" href="./pages/register.html">Registrarse</a></li>
-                        <li><button type="button" id="btnCarrito" class="btn btn-primary menu__item" data-bs-toggle="modal" data-bs-target="#exampleModal">Carrito </button></li>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                        <li><a href="./pages/login.html">Iniciar Sesión</a></li>
+                        <li><a href="./pages/register.html">Registrate</a></li>
                     </ul>
                 </div>
             </div>
@@ -51,7 +52,7 @@
 
         <!-- Sección de contacto -->
         <div id="contactoSection2" class="container my-5">
-            <h2 class="text-center">Queremos Ayudarte</h2>
+            <h2 class="text-center">¿Tenés alguna duda? ¡Queremos ayudarte!</h2>
             <img src="/multimedia/logo.jpeg" alt="icono" class="logo-pequeño">
             
             <!-- Información de contacto y botón de WhatsApp -->
@@ -65,7 +66,7 @@
 
             <!-- Formulario de contacto -->
             <section class="contact-form my-5">
-                <h2 class="text-center" style="margin-bottom: 40px;">Envíanos un Mensaje</h2>
+                <h2 class="text-center" style="margin-bottom: 40px;">Envíanos un mensaje</h2>
                 <form class="row g-3 needs-validation" novalidate>
                     <div class="col-md-6">
                         <label for="nombre" class="form-label">Nombre</label>
@@ -123,12 +124,6 @@
 
     </main>
 
-    <footer>
-        <div class="footerTexto">
-            <p>Ticketly Copyright@ Todos los derechos reservados</p>
-        </div>
-    </footer>
-
     <!-- Scripts de Bootstrap y validación de formulario -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <!-- script -->
@@ -150,4 +145,9 @@
         })()
     </script>
 </body>
+<footer>
+    <div class="footerTexto">
+        <p>Ticketly Copyright@ Todos los derechos reservados</p>
+    </div>
+</footer>
 </html>
