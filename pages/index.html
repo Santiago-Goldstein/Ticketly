@@ -2,132 +2,225 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/headerStyles.css">
-    <link rel="stylesheet" href="/css/serchStyles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Ticketly - Conseguí tus entradas</title>
 </head>
 <body>
-    <main>
-        <header class="mainHeader">
-            <!-- Contenedor para el logo -->
-            <div class="logoContainer">
-                <img src="/multimedia/logo.jpeg" alt="Logo Ticketly" class="logo">
+    <header class="mainHeader">
+        <div class="nav-content">
+            <div class="logo">
+                <img src="../multimedia/logo.jpeg" alt="Logo Ticketly">
                 <p>TICKETLY</p>
             </div>
-            
-            <!-- Contenedor de la navegación -->
-            <div class="navbarContainer">
-                <nav class="navbar">
-                    <ul class="navbar-links">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="login.html">Iniciar Sesión</a></li>
-                        <li><a href="register.html">Registrate</a></li>
-                        <li>
-                            <button type="button" id="btnCarrito3" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                <i class="fa-solid fa-cart-shopping"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- Menú hamburguesa para móviles -->
-                <div class="hamburger-menu">
-                    <input id="menu__toggle" type="checkbox">
-                    <label class="menu__btn" for="menu__toggle">
-                        <button type="button" id="btnCarrito2" class="btn btn-outline-secondary btnCarrito" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                        <span></span>
-                    </label>
-                    <ul class="menu__box">
-                        <li><a class="menu__item" href="index.html">Inicio</a></li>
-                        <li><a class="menu__item" href="contacto.html">Contacto</a></li>
-                        <li><a class="menu__item" href="nosotros.html">Nosotros</a></li>
-                        <li><a class="menu__item" href="login.html">Iniciar Sesión</a></li>
-                        <li><a class="menu__item" href="register.html">Registrate</a></li>
-                        <li><button type="button" id="btnCarrito" class="btn btn-primary menu__item" data-bs-toggle="modal" data-bs-target="#exampleModal">Carrito</button></li>
-                    </ul>
-                </div>
+            <nav class="navbar">
+                <ul class="navbar-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <ll><a href="contact.html">Contactate</a></ll>
+                </ul>
+            </nav>
+            <div class="nav-buttons">
+                <button class="btn-secondary">Iniciar sesión</button>
+                <button class="btn-primary">Registrate</button>
+                <button class="cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal">
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
             </div>
-        </header>
-        
-        <section class="section1">
-            <div class="section1TextContainer">
-                <h2>KURAKI</h2>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Encontrá tu recital perfecto en Ticketly</h1>
+                <p>Descubrí una amplia selección de eventos musicales cerca tuyo</p>
+                
+                <div class="search-container glass-effect">
+                    <div class="search-grid">
+                        <div class="search-item">
+                            <label><i class="fas fa-map-marker-alt"></i> Ubicación</label>
+                            <input type="text" id="locationFilter" placeholder="¿Dónde es el evento?" class="search-input">
+                        </div>
+                        <div class="search-item">
+                            <label><i class="fas fa-music"></i> Evento</label>
+                            <input type="text" id="eventFilter" placeholder="Ej: Rock, Pop, Jazz" class="search-input">
+                        </div>
+                        <div class="search-item">
+                            <label><i class="fas fa-calendar"></i> Fecha</label>
+                            <input type="date" id="dateFilter" class="search-input">
+                        </div>
+                        <button class="search-button">
+                            Buscar <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="section2">
-            <div class="barraHerramientas" id="herramientas">
-                <h2>Herramientas</h2>
-                <div class="divOrdenar">
-                    <div class="divTitulo">
-                        <h3>Ordenar</h3>
+        <section class="featured-events">
+            <h2 class="section-title">Eventos Destacados</h2>
+            <div class="featured-grid">
+                <div class="container">
+                    <div class="shows-carousel">
+                        <button class="carousel-btn prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        
+                        <div class="carousel-container">
+                            <div class="carousel-track">
+                                <div class="show-card">
+                                    <img src="../multimedia/events/oasis.png" alt="OASIS">
+                                    <div class="show-info">
+                                        <h3>OASIS</h3>
+                                        <p>River Plate Stadium</p>
+                                        <button class="ticket-btn">TICKETS A LA VENTA</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="show-card">
+                                    <img src="../multimedia/events/airbag.png" alt="AIRBAG">
+                                    <div class="show-info">
+                                        <h3>AIRBAG</h3>
+                                        <p>Vélez Sarsfield</p>
+                                        <button class="ticket-btn">TICKETS A LA VENTA</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="show-card">
+                                    <img src="../multimedia/events/taylor.png" alt="TAYLOR">
+                                    <div class="show-info">
+                                        <h3>TAYLOR SWIFT</h3>
+                                        <p>Estadio River Plate</p>
+                                        <button class="ticket-btn">TICKETS A LA VENTA</button>
+                                    </div>
+                                </div>
+                                <div class="show-card">
+                                    <img src="../multimedia/events/21pilots.png" alt="21">
+                                    <div class="show-info">
+                                        <h3>TWEENTY ONE PILOTS</h3>
+                                        <p>Movistar Arena</p>
+                                        <button class="ticket-btn">TICKETS A LA VENTA</button>
+                                    </div>
+                                </div>
+                                <div class="show-card">
+                                    <img src="../multimedia/events/maria.png" alt="maria">
+                                    <div class="show-info">
+                                        <h3>MARÍA BECERRA</h3>
+                                        <p>Estadio River Plate</p>
+                                        <button class="ticket-btn">TICKETS A LA VENTA</button>
+                                    </div>
+                                </div>
+                                <div class="show-card">
+                                    <img src="../multimedia/events/natypeluso.png" alt="maria">
+                                    <div class="show-info">
+                                        <h3>NATY PELUSO</h3>
+                                        <p>MOVISTAR ARENA</p>
+                                        <button class="ticket-btn">TICKETS A LA VENTA</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-btn next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
-                    <div class="divBotones">
-                        <button class="btnOrdenar" id="ordenarId">Evento</button>
-                        <button class="btnOrdenar" id="ordenarNombre">Recién agregados</button>
-                        <button class="btnOrdenar" id="ordenarMenorPrecio">Próximamente</button>
-                    </div>
-                    <div id="resultadoTextoOrdenar"></div>
+        </section>
+
+        <section class="all-events">
+            <div class="container">
+                <h2>Todos los Eventos</h2>
+                <div class="events-filter">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="rock">Rock</button>
+                    <button class="filter-btn" data-filter="pop">Pop</button>
+                    <button class="filter-btn" data-filter="electronic">Electrónica</button>
                 </div>
-                <div class="divBuscar">
-                    <input type="text" id="buscador" placeholder="Buscar">
-                    <div id="resultadoTexto"></div>
+                
+                <div class="events-grid">
+                    <div class="event-card" data-category="rock">
+                        <img src="../multimedia/events/event2.jpg" alt="Evento Rock">
+                        <div class="event-details">
+                            <h3>Guns N' Roses</h3>
+                            <p class="event-venue">Vélez Sarsfield</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-calendar"></i> 15 Dic 2024</span>
+                                <span><i class="fas fa-ticket-alt"></i> Desde $15000</span>
+                            </div>
+                            <button class="btn-primary">Comprar Tickets</button>
+                        </div>
+                    </div>
+                    <!-- Repite para otros eventos -->
                 </div>
             </div>
-            <div id="section2">
-                <div class="d-flex align-items-center" id="loader">
-                    <div class="spinner-border text-success ms-auto" role="status" aria-hidden="true"></div>
-                </div>
-            </div>
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Su seleccion:</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body" id="modalBodyCarrito">
-                            ...
-                        </div>
-                        <div id="divCompra" class="modal-body">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <button type="button" class="btn btn-primary" id="btnFinalizarCompra">Finalizar Compra</button>
-                        </div>
+        </section>
+
+        <section class="destinations">
+            <h2>Destinos populares</h2>
+            <div class="destination-grid">
+                <div class="destination-card">
+                    <img src="/multimedia/events/concert1.jpg" alt="Concierto de rock">
+                    <div class="card-overlay">
+                        <h3>Rock</h3>
                     </div>
                 </div>
+                <div class="destination-card">
+                    <img src="/multimedia/events/concert2.jpg" alt="Festival electrónico">
+                    <div class="card-overlay">
+                        <h3>Electrónica</h3>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="/multimedia/events/concert3.jpg" alt="Concierto pop">
+                    <div class="card-overlay">
+                        <h3>Pop</h3>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="/multimedia/events/concert4.jpg" alt="Jazz en vivo">
+                    <div class="card-overlay">
+                        <h3>Jazz</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="venues">
+            <h2>Lugares destacados</h2>
+            <div class="venue-grid">
+                <div class="venue-card glass-effect">
+                    <div class="venue-rating">9.5</div>
+                    <img src="/multimedia/symphony.jpg" alt="Symphony Hall">
+                    <div class="venue-info">
+                        <h3>Symphony Hall</h3>
+                        <p>New York</p>
+                        <p class="price">desde $50/ticket</p>
+                    </div>
+                </div>
+                <!-- Repite para otros venues -->
+            </div>
+        </section>
+
+        <section class="club-banner glass-effect">
+            <div class="banner-content">
+                <div class="ticket-icon">🎫</div>
+                <div class="banner-text">
+                    <h3>¡Shh!</h3>
+                    <p>¿Querés acceso exclusivo a preventas y paquetes VIP? ¡Unite a nuestro Club ahora!</p>
+                </div>
+                <button class="btn-primary">Unirse al Club</button>
             </div>
         </section>
     </main>
-    <footer id="footer">
-        </div>
-        <button class="up" id="btnCarrito4" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-cart-shopping"></i></button>
-        <a href="#" class="up up2"><i class="fa-solid fa-angle-up"></i></a>
-        <a href="#footer" class="up up5"><i class="fa-solid fa-angle-down"></i></a>
-        <a href="#herramientas"class="up up3"><i class="fa-solid fa-screwdriver-wrench"></i></a>
-        <a href="#section2"class="up up4"><i class="fa-sharp fa-solid fa-bag-shopping"></i></a>
-    </footer>
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <!-- toastify -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <!-- sweet alert -->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- script -->
-    <script src=".../js/scripts.js"></script>
+
+    <!-- Mantén tu footer actual -->
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/scripts.js"></script>
 </body>
-</html>
+</html> 

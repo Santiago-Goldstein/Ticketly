@@ -1,75 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="sweetalert2.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/headerStyles.css">
-    <title>Ticketly- Iniciar Sesión</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>RecitalTick - Tu portal de eventos</title>
 </head>
-
 <body>
+    <header class="mainHeader">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="/">Ticketly</a>
+            </div>
+            
+            <nav class="navbar">
+                <ul class="navbar-links">
+                    <li><a href="/pages/events.html">Inicio</a></li>
+                    <li><a href="/pages/venues.html">Contacto</a></li>
+                    <li><a href="/pages/about.html">Nosotros</a></li>
+                    <li><a href="/pages/contact.html">Login</a></li>
+                    <li><a href="/pages/contact.html">Iniciar sesión</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-buttons">
+                <a href="/pages/login.html" class="btn-secondary">Iniciar Sesión</a>
+                <a href="/pages/register.html" class="btn-primary">Registrarse</a>
+                <button class="cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal">
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+            <!-- Menú móvil -->
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox">
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+                <ul class="menu__box">
+                    <li><a class="menu__item" href="/pages/events.html">Eventos</a></li>
+                    <li><a class="menu__item" href="/pages/venues.html">Lugares</a></li>
+                    <li><a class="menu__item" href="/pages/about.html">Nosotros</a></li>
+                    <li><a class="menu__item" href="/pages/contact.html">Contacto</a></li>
+                    <li><a class="menu__item" href="/pages/login.html">Iniciar Sesión</a></li>
+                    <li><a class="menu__item" href="/pages/register.html">Registrarse</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
     <main>
-        <header class="mainHeader">
-            <div class="logoContainer">
-                <p>TICKETLY</p>
-            </div>
-            <div class="navbarContainer">
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="register.html">Registrarse</a></li>
-                    </ul>
-                </nav>
-                <div class="hamburger-menu">
-                    <input id="menu__toggle" type="checkbox" />
-                    <label class="menu__btn" for="menu__toggle">
-                        <span></span>
-                    </label>
-                    <ul class="menu__box">
-                        <li><a class="menu__item" href="index.html">Inicio</a></li>
-                        <li><a class="menu__item" href="contacto.html">Contacto</a></li>
-                        <li><a class="menu__item" href="register.html">Registrate</a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
         <div class="login-container">
-            <h2 class="login-title">Iniciar Sesión</h2>
-            <form class="login-form">
-                <div class="form-group">
-                    <label for="username"><i class="fas fa-user"></i> Usuario</label>
-                    <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
-                </div>
-                <div class="form-group">
-                    <label for="password"><i class="fas fa-lock"></i> Contraseña</label>
-                    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-            </form>
+            <div class="form-card">
+                <h2>Iniciar Sesión</h2>
+                <form class="login-form">
+                    <div class="form-group">
+                        <label for="username">
+                            <i class="fas fa-user"></i>
+                            Usuario
+                        </label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">
+                            <i class="fas fa-lock"></i>
+                            Contraseña
+                        </label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Ingresar</button>
+                    <div class="form-footer">
+                        <p>¿No tienes cuenta? <a href="/pages/register.html">Regístrate</a></p>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <!-- SweetAlert2 -->
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tu Carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="cartItems">
+                    <!-- Items del carrito -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn-primary" id="checkoutBtn">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>RecitalTick</h3>
+                <p>Tu destino para los mejores eventos musicales</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Explorar</h4>
+                    <a href="/pages/events.html">Eventos</a>
+                    <a href="/pages/venues.html">Lugares</a>
+                    <a href="/pages/about.html">Nosotros</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <a href="/pages/contact.html">Contacto</a>
+                    <a href="/pages/faq.html">FAQ</a>
+                    <a href="/pages/terms.html">Términos</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RecitalTick. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <button class="float-btn" id="cartBtn" data-bs-toggle="modal" data-bs-target="#cartModal">
+            <i class="fas fa-shopping-cart"></i>
+        </button>
+        <a href="#" class="float-btn" id="topBtn">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- Archivo de validación y efectos -->
-    <script src="/js/login.js"></script>
-    <!-- script -->
     <script src="/js/scripts.js"></script>
 </body>
-<footer>
-    <div class="footerTexto"><p>Ticketly Copyright@ Todos los derechos reservados</p>
-    </div>
-</footer>
 </html>
