@@ -200,6 +200,8 @@ function proceedToCheckout() {
                 Swal.showLoading();
             }
         }).then(() => {
+            cart.clearCart();  // Llamamos al método que vacía el carrito
+            cart.updateCartUI();
             // Redirigir al checkout
             window.location.href = '/pages/checkout.html';
         });
