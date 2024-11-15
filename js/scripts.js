@@ -197,7 +197,7 @@ function proceedToCheckout() {
         }
     }).then(() => {
         // Aquí irías a tu pasarela de pago
-        window.location.href = '/checkout';
+        window.location.href = '/pages/checkout.html';
     });
 }
 
