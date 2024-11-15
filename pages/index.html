@@ -356,6 +356,16 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Verifica si el usuario está logueado
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            if (isLoggedIn === 'true') {
+                // Redirige al usuario a menu_usuario.html
+                window.location.href = '/pages/menu_usuario.html';
+            }
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/scripts.js"></script>
     <script src="/js/club_vip.js"></script>
