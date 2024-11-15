@@ -330,14 +330,16 @@ body {
     padding: 0 20px;
 }
 
-/* Restaurar los estilos del buscador */
+/* Estilos del buscador */
 .search-container {
     background: rgba(42, 45, 41, 0.8);
     backdrop-filter: blur(10px);
     border-radius: 16px;
     padding: 2.5rem;
-    margin-top: 3rem;
+    margin: 3rem auto;
     border: 1px solid rgba(233, 233, 229, 0.1);
+    max-width: 1200px;
+    width: 90%;
 }
 
 .search-grid {
@@ -356,9 +358,13 @@ body {
 .search-item label {
     color: #e9e9e5;
     font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.search-item input {
+.search-input {
+    width: 100%;
     padding: 0.8rem;
     border: 1px solid rgba(233, 233, 229, 0.1);
     border-radius: 8px;
@@ -366,19 +372,74 @@ body {
     color: #e9e9e5;
 }
 
-.search-btn {
+.search-button {
+    height: 42px;
+    padding: 0 1.5rem;
     background: #e44d5a;
     color: #e9e9e5;
     border: none;
-    padding: 0.8rem 1.5rem;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease;
-    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
 }
 
-.search-btn:hover {
-    background: #ca3f4a;
+/* Media Queries para el buscador */
+@media (max-width: 992px) {
+    .search-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .search-button {
+        grid-column: span 2;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        padding: 1.5rem;
+        margin: 2rem auto;
+        width: 95%;
+    }
+
+    .search-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-button {
+        grid-column: 1;
+        height: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-container {
+        padding: 1rem;
+        margin: 1rem auto;
+        width: 98%;
+    }
+
+    .search-grid {
+        gap: 0.8rem;
+    }
+
+    .search-item {
+        gap: 0.3rem;
+    }
+
+    .search-input {
+        font-size: 16px;
+    }
+
+    .search-button {
+        font-size: 0.9rem;
+    }
 }
 
 /* Estilos para los filtros */
