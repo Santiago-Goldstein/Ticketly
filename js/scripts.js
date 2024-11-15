@@ -202,19 +202,35 @@ function proceedToCheckout() {
 }
 
 // Event listeners para los botones de compra
-document.querySelectorAll('.ticket-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        const eventCard = button.closest('.event-card');
-        const priceText = eventCard.querySelector('.price').textContent;
-        const price = parseInt(priceText.replace(/[^\d]/g, '')); // Extrae solo los números
+document.addEventListener('DOMContentLoaded', () => {
+    // Función para encontrar todos los botones de tickets
+    function findTicketButtons() {
+        const buttons = Array.from(document.getElementsByTagName('button'));
+        return buttons.filter(button => {
+            return button.classList.contains('ticket-btn') || 
+                   button.textContent.trim().toUpperCase() === 'TICKETS A LA VENTA';
+        });
+    }
 
-        const event = {
-            id: eventCard.dataset.eventId || Math.random().toString(36).substr(2, 9),
-            name: eventCard.querySelector('h3').textContent,
-            price: price
-        };
-        
-        showTicketSelector(event);
+    const ticketButtons = findTicketButtons();
+    
+    ticketButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const eventCard = button.closest('.event-card');
+            if (!eventCard) return;
+
+            const priceText = eventCard.querySelector('.price')?.textContent || '0';
+            const price = parseInt(priceText.replace(/[^\d]/g, ''));
+            const eventName = eventCard.querySelector('h3')?.textContent || 'Evento';
+
+            const event = {
+                id: eventCard.dataset.eventId || Math.random().toString(36).substr(2, 9),
+                name: eventName,
+                price: price
+            };
+            
+            showTicketSelector(event);
+        });
     });
 });
 
@@ -247,5 +263,79 @@ filterButtons.forEach(button => {
                 }
             }
         });
+    });
+});
+
+// Buscador del hero
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.querySelector('#eventFilter');
+    const venueInput = document.querySelector('#locationFilter');
+    const dateInput = document.querySelector('#dateFilter');
+    const searchButton = document.querySelector('.search-button');
+
+    function scrollToEvents() {
+        const eventsSection = document.querySelector('.all-events');
+        if (eventsSection) {
+            eventsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    function performSearch() {
+        const searchTerm = searchInput?.value.toLowerCase() || '';
+        const venueTerm = venueInput?.value.toLowerCase() || '';
+        const dateTerm = dateInput?.value || '';
+
+        let foundResults = false;
+
+        eventCards.forEach(card => {
+            const eventName = card.querySelector('h3')?.textContent.toLowerCase() || '';
+            const venue = card.querySelector('.venue')?.textContent.toLowerCase() || '';
+            const date = card.querySelector('.date')?.textContent.toLowerCase() || '';
+
+            const hasSearchTerm = searchTerm !== '';
+            const hasVenueTerm = venueTerm !== '';
+            const hasDateTerm = dateTerm !== '';
+
+            const matchesSearch = !hasSearchTerm || eventName.includes(searchTerm);
+            const matchesVenue = !hasVenueTerm || venue.includes(venueTerm);
+            const matchesDate = !hasDateTerm || date.includes(dateTerm);
+
+            if (matchesSearch && matchesVenue && matchesDate) {
+                card.style.display = 'flex';
+                foundResults = true;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        return foundResults;
+    }
+
+    // Solo el botón de búsqueda activa la búsqueda y el scroll
+    searchButton?.addEventListener('click', (e) => {
+        e.preventDefault();
+        const foundResults = performSearch();
+        if (foundResults) {
+            scrollToEvents();
+        } else {
+            Swal.fire({
+                title: 'Sin resultados',
+                text: 'No se encontraron eventos que coincidan con tu búsqueda',
+                icon: 'info'
+            });
+        }
+    });
+
+    // Restaurar vista original cuando los campos estén vacíos
+    [searchInput, venueInput, dateInput].forEach(input => {
+        if (input) {
+            input.addEventListener('input', () => {
+                if (!searchInput.value && !venueInput.value && !dateInput.value) {
+                    eventCards.forEach(card => {
+                        card.style.display = 'flex';
+                    });
+                }
+            });
+        }
     });
 });
