@@ -22,7 +22,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.myTickets {
+    margin-top: 100px; /* Ajusta el valor según sea necesario */
+}
 body {
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -565,11 +567,6 @@ body {
 .swal-popup-custom {
   border-radius: 10px;
   padding: 20px;
-}
-
-
-.myTickets {
-    margin-top: 100px; /* Ajusta el valor según sea necesario */
 }
 }
 
