@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="checkout-container">
+        <h1>Checkout</h1>
+        <form id="checkout-form">
+            <div class="form-group">
+                <label for="fullName">Nombre Completo</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Ingrese su nombre completo" required>
+            </div>
+            <div class="form-group">
+                <label for="cardNumber">Número de Tarjeta</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+            </div>
+            <div class="form-group">
+                <label for="dni">DNI</label>
+                <input type="text" id="dni" name="dni" placeholder="Ingrese su DNI" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="checkout-btn">Confirmar Compra</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Seleccionamos el formulario
+        const checkoutForm = document.getElementById('checkout-form');
+    
+        // Agregamos un manejador de eventos para el submit del formulario
+        checkoutForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Evita que el formulario se envíe y recargue la página
+    
+            // Mostrar el mensaje de confirmación de compra
+            Swal.fire({
+                title: '¡Compra completada!',
+                text: 'Gracias por tu compra. En breve serás redirigido a tu cuenta.',
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 3000,
+                background: '#f8f9fa', // Fondo suave y claro
+                iconColor: '#28a745', // Color verde para el ícono de éxito
+                customClass: {
+                    title: 'swal-title', // Clase personalizada para el título
+                    popup: 'swal-popup', // Clase personalizada para el cuadro de diálogo
+                },
+                willClose: () => {
+                    // Redirigir al menú del usuario cuando se cierre el mensaje
+                    window.location.href = '/pages/menu_usuario.html';
+                }
+            });
+        });
+    </script>
+    
+    <!-- Agregar estilo adicional -->
+    <style>
+        /* Personalización de estilo de SweetAlert2 */
+        .swal-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+    
+        .swal-popup {
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
+    </style>
+    
+</body>
+</html>
