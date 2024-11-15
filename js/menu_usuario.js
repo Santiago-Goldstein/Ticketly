@@ -1,4 +1,3 @@
-// Asegúrate de que el código se ejecute cuando el DOM esté listo
 document.addEventListener("click", function (event) {
     if (event.target.id === "logoutBtn" || event.target.id === "logoutBtn1") {
         Swal.fire({
@@ -29,7 +28,6 @@ document.addEventListener("click", function (event) {
 document.addEventListener("DOMContentLoaded", function() {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
     if (isLoggedIn !== "true") {
-        // Redirigir a la página de inicio
         window.location.href = "/pages/index.html";
     }
 });

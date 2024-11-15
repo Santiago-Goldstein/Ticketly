@@ -358,10 +358,8 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Verifica si el usuario está logueado
             const isLoggedIn = localStorage.getItem('isLoggedIn');
             if (isLoggedIn === 'true') {
-                // Redirige al usuario a menu_usuario.html
                 window.location.href = '/pages/menu_usuario.html';
             }
         });

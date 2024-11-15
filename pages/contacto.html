@@ -38,10 +38,8 @@
                 </div>
             </div>
 
-            <!-- Botón para mostrar/ocultar el menú -->
         <button id="toggleMenu" class="menu-btn">☰</button>
 
-        <!-- Menú desplegable -->
         <div class="menu-box" id="menubox">
             <ul class="menu-links">
                 <li><a href="/pages/index.html">Inicio</a></li>
@@ -60,10 +58,8 @@
         
         </section>
 
-        <!-- Sección de contacto -->
         <div id="contactoSection2" class="container my-5">
             
-            <!-- Información de contacto y botón de WhatsApp -->
             <section class="contact-info text-center my-5">
                 <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> ticketly@gmail.com</p>
                 <p><i class="fa-solid fa-phone"></i> <strong>Telefono:</strong> 11-6747-2996</p>
@@ -72,7 +68,6 @@
                 </a>
             </section>
 
-            <!-- Formulario de contacto -->
             <section class="contact-form my-5">
                 <h2 class="text-center" style="margin-bottom: 40px;">Envíanos un mensaje</h2>
                 <form class="row g-3 needs-validation" novalidate>
@@ -99,7 +94,6 @@
         </div>
         
         <script>
-            // Validación de formulario y redirección a WhatsApp
             (() => {
                 'use strict'
                 const forms = document.querySelectorAll('.needs-validation')
@@ -109,20 +103,16 @@
                             event.preventDefault()
                             event.stopPropagation()
                         } else {
-                            // Obtener los datos del formulario
                             const nombre = document.getElementById('nombre').value;
                             const email = document.getElementById('email').value;
                             const mensaje = document.getElementById('mensaje').value;
         
-                            // Crear el mensaje que se enviará a través de WhatsApp
                             const mensajeWhatsApp = `*Nombre:* ${nombre}%0A*Email:* ${email}%0A*Mensaje:* ${mensaje}`;
                             
-                            // Enlace de WhatsApp con el mensaje predefinido
                             const urlWhatsApp = `https://wa.me/1167472996?text=${mensajeWhatsApp}`;
         
-                            // Redirigir al enlace de WhatsApp
                             window.open(urlWhatsApp, '_blank');
-                            event.preventDefault(); // Prevenir el envío del formulario convencional
+                            event.preventDefault();
                         }
                         form.classList.add('was-validated')
                     }, false)
@@ -132,12 +122,9 @@
 
     </main>
 
-    <!-- Scripts de Bootstrap y validación de formulario -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <!-- script -->
     <script src="/js/scripts.js"></script>
     <script>
-        // Validación de formulario
         (() => {
             'use strict'
             const forms = document.querySelectorAll('.needs-validation')

@@ -1,4 +1,4 @@
-// Clase para manejar el carrito
+
 class Cart {
     constructor() {
         this.items = {};
@@ -89,10 +89,8 @@ class Cart {
     }
 }
 
-// Inicializar el carrito
 const cart = new Cart();
 
-// Función para mostrar el selector de tickets con SweetAlert2
 async function showTicketSelector(event) {
     const result = await Swal.fire({
         title: event.name,
@@ -148,7 +146,6 @@ async function showTicketSelector(event) {
     }
 }
 
-// Función para mostrar el carrito
 function showCart() {
     if (Object.keys(cart.items).length === 0) {
         Swal.fire('Carrito vacío', 'No hay tickets en el carrito', 'info');
@@ -185,9 +182,7 @@ function showCart() {
     });
 }
 
-// Función para proceder al checkout
 function proceedToCheckout() {
-    // Verificar si el usuario está logueado
     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
     if (isLoggedIn === "true") {
@@ -200,9 +195,8 @@ function proceedToCheckout() {
                 Swal.showLoading();
             }
         }).then(() => {
-            cart.clearCart();  // Llamamos al método que vacía el carrito
+            cart.clearCart(); 
             cart.updateCartUI();
-            // Redirigir al checkout
             window.location.href = '/pages/checkout.html';
         });
     } else {
@@ -211,16 +205,13 @@ function proceedToCheckout() {
             title: 'Inicia sesión para proceder',
             confirmButtonText: 'Ir a login'
         }).then(() => {
-            // Redirigir al login
             window.location.href = '/pages/login.html';
         });
     }
 }
 
 
-// Event listeners para los botones de compra
 document.addEventListener('DOMContentLoaded', () => {
-    // Función para encontrar todos los botones de tickets
     function findTicketButtons() {
         const buttons = Array.from(document.getElementsByTagName('button'));
         return buttons.filter(button => {

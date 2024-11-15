@@ -33,37 +33,31 @@
     </div>
 
     <script>
-        // Seleccionamos el formulario
         const checkoutForm = document.getElementById('checkout-form');
     
-        // Agregamos un manejador de eventos para el submit del formulario
         checkoutForm.addEventListener('submit', function (e) {
-            e.preventDefault(); // Evita que el formulario se envíe y recargue la página
+            e.preventDefault();
     
-            // Mostrar el mensaje de confirmación de compra
             Swal.fire({
                 title: '¡Compra completada!',
                 text: 'Gracias por tu compra. En breve serás redirigido a tu cuenta.',
                 icon: 'success',
                 showConfirmButton: false,
                 timer: 3000,
-                background: '#f8f9fa', // Fondo suave y claro
-                iconColor: '#28a745', // Color verde para el ícono de éxito
+                background: '#f8f9fa', 
+                iconColor: '#28a745',
                 customClass: {
-                    title: 'swal-title', // Clase personalizada para el título
-                    popup: 'swal-popup', // Clase personalizada para el cuadro de diálogo
+                    title: 'swal-title', 
+                    popup: 'swal-popup',
                 },
                 willClose: () => {
-                    // Redirigir al menú del usuario cuando se cierre el mensaje
                     window.location.href = '/pages/menu_usuario.html';
                 }
             });
         });
     </script>
     
-    <!-- Agregar estilo adicional -->
     <style>
-        /* Personalización de estilo de SweetAlert2 */
         .swal-title {
             font-size: 24px;
             font-weight: bold;

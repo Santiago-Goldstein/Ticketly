@@ -1,16 +1,13 @@
-// login.js
-
 document.addEventListener("DOMContentLoaded", function() {
     const loginForm = document.querySelector('.login-form');
 
     if (loginForm) {
         loginForm.addEventListener('submit', async function(e) {
-            e.preventDefault(); // Evita el envío del formulario
+            e.preventDefault();
 
             const username = document.getElementById('username').value.trim();
             const password = document.getElementById('password').value;
 
-            // Validación simple
             if (!username || !password) {
                 Swal.fire({
                     icon: 'error',
@@ -30,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 const result = await response.json();
                 if (response.ok) {
-                    // Guardar sesión correctamente en localStorage
+
                     localStorage.setItem("isLoggedIn", "true");
 
                     Swal.fire({
@@ -39,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
                         text: `Bienvenido, ${username}!`
                     });
 
-                    // Redirigir a menu_usuario.html
                     window.location.href = "menu_usuario.html";
                 } else {
                     Swal.fire({
