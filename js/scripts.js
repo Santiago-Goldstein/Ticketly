@@ -130,17 +130,30 @@ const eventCards = document.querySelectorAll('.event-card');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Actualizar botones activos
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
-
-        // Filtrar eventos
-        const filter = button.dataset.filter;
+        
+        const filterValue = button.getAttribute('data-filter');
+        
         eventCards.forEach(card => {
-            if (filter === 'all' || card.dataset.category === filter) {
-                card.style.display = 'block';
+            if (filterValue === 'all') {
+                card.style.opacity = '1';
+                card.style.transform = 'scale(1)';
+                card.style.display = 'flex';
             } else {
-                card.style.display = 'none';
+                if (card.getAttribute('data-category') === filterValue) {
+                    card.style.display = 'flex';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
             }
         });
     });
