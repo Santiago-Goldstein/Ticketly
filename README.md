@@ -38,6 +38,11 @@ npx http-server .
 
 - Una vez abierto el archivo index.html, podrás ver la aplicación en tu navegador y comenzar a interactuar con ella.
 
+## Usuarios creados
+
+- Username: admin
+- Password: 123
+
 ## 📁 Estructura del Proyecto
 index.html – Página principal de la aplicación.
 css/ – Carpeta que contiene los archivos CSS para el diseño de la aplicación.
