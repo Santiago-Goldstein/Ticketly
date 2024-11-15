@@ -34,17 +34,21 @@
                 <div class="nav-buttons">
                     <button class="btn-secondary" onclick="window.location.href='login.html'">Iniciar sesión</button>
                     <button class="btn-primary" onclick="window.location.href='register.html'">Regístrate</button>
-                    <button class="cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal">
                         <i class="fas fa-shopping-cart"></i>
                     </button>
                 </div>
             </div>
         </header>
 
+        <section class="hero">
+            <div class="hero-content">
+                <h1>CENTRO DE AYUDA</h1>
+                <p>¿Tenés alguna duda? ¡Queremos ayudarte!</p>
+        
+        </section>
+
         <!-- Sección de contacto -->
         <div id="contactoSection2" class="container my-5">
-            <h2 class="text-center">¿Tenés alguna duda? ¡Queremos ayudarte!</h2>
-            <img src="/multimedia/logo.jpeg" alt="icono" class="logo-pequeño">
             
             <!-- Información de contacto y botón de WhatsApp -->
             <section class="contact-info text-center my-5">
@@ -136,9 +140,29 @@
         })()
     </script>
 </body>
-<footer>
-    <div class="footerTexto">
-        <p>Ticketly Copyright@ Todos los derechos reservados</p>
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h3>Ticketly</h3>
+            <p>Tu destino para los mejores eventos musicales</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-section">
+                <h4>Soporte</h4>
+                <a href="/pages/contacto.html">Contacto</a>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ticketly. Todos los derechos reservados.</p>
+        </div>
     </div>
 </footer>
 </html>

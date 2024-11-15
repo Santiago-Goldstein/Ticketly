@@ -374,32 +374,34 @@ body {
 }
 
 .event-card {
-  background: rgba(25, 28, 35, 0.95);
+  background: rgba(25, 28, 35, 0.8);
   backdrop-filter: blur(10px);
   border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .event-content {
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1.5rem;
+  gap: 2rem;
 }
 
 .event-image {
-  width: 100%;
+  width: 200px;
   height: 200px;
   object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
 }
 
 .event-info {
-  padding: 1rem;
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  justify-content: flex-start;
 }
 
 .event-info h3 {
@@ -462,7 +464,7 @@ body {
 
 @media (max-width: 1200px) {
     .events-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
     }
 }
 
@@ -519,4 +521,331 @@ body {
 
 .myTickets {
     margin-top: 100px; /* Ajusta el valor según sea necesario */
+}
+}
+
+.footer {
+  background: rgba(25, 28, 35, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid rgba(233, 233, 229, 0.1);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: #e9e9e5;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #e44d5a;
+}
+
+.footer-text {
+  color: #e9e9e5;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.footer-bottom {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.footer-bottom-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.footer-bottom-text {
+  color: #e9e9e5;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-bottom-links a {
+  color: #e9e9e5;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+  opacity: 0.7;
+}
+
+.footer-bottom-links a:hover {
+  color: #e44d5a;
+  opacity: 1;
+}
+
+/* Para dispositivos móviles */
+@media (max-width: 768px) {
+  .footer-bottom-content {
+      flex-direction: column;
+      gap: 1rem;
+  }
+
+  .footer-bottom-links {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+}
+
+.ticket-selector {
+    padding: 1rem;
+    text-align: center;
+}
+
+.quantity-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.quantity-selector button {
+    min-width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ticketQuantity {
+    width: 60px;
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Personalización del SweetAlert */
+.swal2-popup {
+    background: rgba(25, 28, 35, 0.95) !important;
+    color: #e9e9e5 !important;
+}
+
+.swal2-title {
+    color: #e9e9e5 !important;
+}
+
+.swal2-html-container {
+    color: #e9e9e5 !important;
+}
+
+.swal2-confirm {
+    background: #e44d5a !important;
+}
+
+.swal2-cancel {
+    background: #4e546b !important;
+}
+
+/* Grid y Cards */
+.events-grid {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: flex-start;
+}
+
+.event-card {
+    width: calc(50% - 1rem);
+    min-width: 500px;
+    background: rgba(25, 28, 35, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.event-content {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.5rem;
+    gap: 2rem;
+}
+
+.event-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.event-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.event-info h3 {
+    font-size: 1.5rem;
+    color: #e9e9e5;
+    margin: 0;
+}
+
+.venue, .date, .price {
+    color: #e9e9e5;
+    font-size: 0.9rem;
+}
+
+.ticket-btn {
+    background: #e44d5a;
+    color: #e9e9e5;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+    width: fit-content;
+}
+
+.ticket-btn:hover {
+    background: #ca3f4a;
+}
+
+/* Estilos del SweetAlert */
+.swal2-popup {
+    background: rgba(25, 28, 35, 0.95) !important;
+    color: #e9e9e5 !important;
+}
+
+.swal2-title {
+    color: #e9e9e5 !important;
+}
+
+.swal2-html-container {
+    color: #e9e9e5 !important;
+}
+
+.swal2-confirm {
+    background: #e44d5a !important;
+}
+
+.swal2-cancel {
+    background: #4e546b !important;
+}
+
+/* Selector de tickets en SweetAlert */
+.ticket-selector {
+    padding: 1rem;
+    text-align: center;
+}
+
+.quantity-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.quantity-selector button {
+    min-width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ticketQuantity {
+    width: 60px;
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 1200px) {
+    .event-card {
+        width: 100%;
+    }
+}
+
+.cart-btn {
+    position: relative;
+    background: none;
+    border: none;
+    color: #e9e9e5;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #e44d5a;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    min-width: 20px;
+    text-align: center;
+}
+
+.cart-items {
+    margin-bottom: 1rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cart-total {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 1rem;
 }

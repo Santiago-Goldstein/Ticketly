@@ -1,4 +1,3 @@
-
 body {
     color: #e9e9e5; 
     background-color: #191c18;
@@ -7,6 +6,25 @@ body {
 
 a {
     color: #e9e9e5; /* Color del texto de los enlaces */
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(42, 45, 41, 0.8)
+    ),
+    url('../multimedia/image.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #e9e9e5;
+    padding-top: 80px;
 }
 
 a:hover {
@@ -44,53 +62,121 @@ i:hover {
     color: #c7404d; /* Color de los iconos al pasar el mouse */
 }
 
-/* Estilo del texto del footer */
-footer .footerTexto p {
-    color: #e9e9e5; /* Color del texto en el footer */
+/* Estilos generales */
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.logo-pequeño {
-    width: 100%;          
-    object-fit: contain;
-    height: 250px;        
-    object-fit: cover;    
-    display: block;
-  }
-
-/* Estilo para las cabeceras (h1, h2, h3) */
-h2, h3 {
-    color: #e9e9e5; /* Color de las cabeceras */
+/* Estilo para el título principal */
+.contact-title {
+    color: #e9e9e5;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 /* Estilo del formulario */
-.contact-form .form-label,
-.contact-info p {
-    color: #e9e9e5; /* Color de las etiquetas y párrafos */
+.contact-form {
+    background: rgba(25, 28, 35, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.contact-form .form-control {
-    border: 1px solid #e44d5a; /* Borde de los inputs */
+.form-group {
+    margin-bottom: 1.5rem;
 }
 
-.contact-form .form-control:focus {
-    border-color: #e44d5a; /* Borde de los inputs cuando están en foco */
+.form-label {
+    color: #e9e9e5;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
 }
 
-/* Hacer el footer fijo */
-footer {
-    background-color: #191c18; /* Fondo negro */
-    bottom: 0;
+.form-control {
     width: 100%;
-    text-align: center;
-    padding: 10px 0;
+    padding: 0.8rem;
+    background: rgba(78, 84, 107, 0.3);
+    border: 1px solid rgba(228, 77, 90, 0.3);
+    border-radius: 8px;
+    color: #e9e9e5;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
-footer .footerTexto p {
-    margin: 0;
-    color: #e9e9e5; /* Color del texto en el footer */
+.form-control:focus {
+    outline: none;
+    border-color: #e44d5a;
+    background: rgba(78, 84, 107, 0.4);
 }
 
-/* Asegurarse de que el contenido principal tenga espacio suficiente para el footer fijo */
-main {
-    padding-bottom: 60px; /* Espacio para el footer fijo */
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Botón del formulario */
+.submit-btn {
+    background: #e44d5a;
+    color: #e9e9e5;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    width: fit-content;
+}
+
+.submit-btn:hover {
+    background: #ca3f4a;
+}
+
+/* Información de contacto */
+.contact-info {
+    background: rgba(25, 28, 35, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-info h3 {
+    color: #e9e9e5;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    color: #e9e9e5;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Logo */
+.logo-pequeño {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 2rem auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 1rem;
+    }
+    
+    .contact-title {
+        font-size: 2rem;
+    }
 }
