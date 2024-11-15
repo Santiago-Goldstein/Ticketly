@@ -464,3 +464,48 @@ body {
 .club-btn:hover {
   background: #ca3f4a;
 }
+
+
+/* Styles Logout */
+
+#logoutBtn {
+  background-color: #ff4d4d; /* Rojo suave */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#logoutBtn:hover {
+  background-color: #e63946; /* Rojo más intenso al pasar el cursor */
+  transform: scale(1.05); /* Ligero aumento de tamaño */
+}
+
+#logoutBtn:active {
+  background-color: #cc3333; /* Rojo más oscuro al hacer clic */
+  transform: scale(0.95); /* Efecto de presión */
+}
+
+/* Styles del boton Club Vip */
+
+/* Personaliza el estilo del título */
+.swal-title-custom {
+  font-size: 24px;
+  color: #5d67b9;
+  font-weight: bold;
+}
+
+/* Personaliza la ventana emergente */
+.swal-popup-custom {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+.myTickets {
+    margin-top: 100px; /* Ajusta el valor según sea necesario */
+}

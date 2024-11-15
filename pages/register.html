@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/singUp.css">
+    <link rel="stylesheet" href="../css/signUp.css">
     <link rel="stylesheet" href="../css/headerStyles.css">
     <title>Ticketly - Registrate</title>
 </head>
@@ -22,9 +22,9 @@
         <header class="mainHeader">
             <div class="nav-content">
                 <div class="logo">
-                    <a href="/">Ticketly</a>
+                    <img src="../multimedia/logo.jpeg" alt="Logo Ticketly">
+                    <p>TICKETLY</p>
                 </div>
-                
                 <nav class="navbar">
                     <ul class="navbar-links">
                         <li><a href="/pages/index.html">Inicio</a></li>
@@ -32,10 +32,9 @@
                         <li><a href="/pages/nosotros.html">Nosotros</a></li>
                     </ul>
                 </nav>
-                
                 <div class="nav-buttons">
-                    <a href="/pages/login.html" class="btn-secondary">Iniciar Sesión</a>
-                    <a href="/pages/register.html" class="btn-primary">Registrarse</a>
+                    <button class="btn-secondary" onclick="window.location.href='login.html'">Iniciar sesión</button>
+                    <button class="btn-primary" onclick="window.location.href='register.html'">Regístrate</button>
                     <button class="cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal">
                         <i class="fas fa-shopping-cart"></i>
                     </button>
@@ -56,8 +55,6 @@
                 </ul>
             </div>
         </header>
-
-        
         
         <div class="register-container">
             <h2 class="register-title">Registrate</h2>

@@ -49,9 +49,16 @@
                 <li><a class="menu__item" href="/pages/about.html">Nosotros</a></li>
                 <li><a class="menu__item" href="/pages/contact.html">Contacto</a></li>
             </ul>
+        </nav>
+        <div class="nav-buttons">
+            <button class="btn-secondary" onclick="window.location.href='login.html'">Iniciar sesión</button>
+            <button class="btn-primary" onclick="window.location.href='register.html'">Regístrate</button>
+            <button class="cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal">
+                <i class="fas fa-shopping-cart"></i>
+            </button>
         </div>
-    </header>
-
+    </div>
+</header>
     <main>
         <div class="login-container">
             <div class="form-card">
@@ -73,7 +80,7 @@
                     </div>
                     <button type="submit" class="btn-primary">Ingresar</button>
                     <div class="form-footer">
-                        <p>¿No tienes cuenta? <a href="/pages/register.html">Regístrate</a></p>
+                        <p>¿No tienes cuenta? <a href="register.html">Regístrate</a></p>
                     </div>
                 </form>
             </div>
