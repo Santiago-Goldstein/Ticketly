@@ -49,6 +49,10 @@ body {
   border: 1px solid var(--glass-border);
   color: var(--secondary-color);
 }
+.search-button {
+    background: var(--accent-gradient);
+    color: var(--secondary-color);
+}
 
 .card {
   background: var(--glass-bg);

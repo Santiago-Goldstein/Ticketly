@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         confirmButtonText: 'Aceptar'
                     }).then(() => {
                         // Redirigir a la página de inico
-                        window.location.href = "/pages/index.html";
+                        window.location.href = "index.html";
                     });
                 }
             });
