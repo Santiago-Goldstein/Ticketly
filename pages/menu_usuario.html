@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/headerStyles.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/menu_box.css">
     <title>Ticketly - Conseguí tus entradas</title>
 </head>
 <body>
@@ -35,6 +36,23 @@
                 <span class="cart-count">0</span>
             </button>
         </div>
+    </div>
+
+    <!-- Botón para mostrar/ocultar el menú -->
+    <button id="toggleMenu" class="menu-btn">☰</button>
+
+    <!-- Menú desplegable -->
+    <div class="menu-box" id="menubox">
+        <ul class="menu-links">
+            <li><a href="/pages/index.html">Inicio</a></li>
+            <li><a href="/pages/nosotros.html">Nosotros</a></li>
+            <li><a href="/pages/contacto.html">Contactate</a></li>
+            <button class="cart-btn" onclick="showCart()"></button>
+            <button class="cart-btn" onclick="showCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </button>
+        </ul>
     </div>
 </header>
 

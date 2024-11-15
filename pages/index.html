@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/headerStyles.css">
+    <link rel="stylesheet" href="/css/menu_box.css">
     <title>Ticketly - Conseguí tus entradas</title>
 </head>
 
@@ -37,6 +38,21 @@
                 </button>
             </div>
         </div>
+        
+        <!-- Botón para mostrar/ocultar el menú -->
+        <button id="toggleMenu" class="menu-btn">☰</button>
+
+        <!-- Menú desplegable -->
+        <div class="menu-box" id="menubox">
+            <ul class="menu-links">
+                <li><a href="/pages/index.html">Inicio</a></li>
+                <li><a href="/pages/nosotros.html">Nosotros</a></li>
+                <li><a href="/pages/contacto.html">Contactate</a></li>
+                <li><a href="/pages/login.html">Iniciar sesión</a></li>
+                <li><a href="/pages/register.html">Regístrarse</a></li>
+            </ul>
+        </div>
+
     </header>
 
     <main>
@@ -314,34 +330,34 @@
         </section>
     </main>
 
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Ticketly</h3>
+                <p>Tu destino para los mejores eventos musicales</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <a href="/pages/contacto.html">Contacto</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ticketly. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/scripts.js"></script>
     <script src="/js/club_vip.js"></script>
 </body>
-<footer class="main-footer">
-    <div class="footer-content">
-        <div class="footer-brand">
-            <h3>Ticketly</h3>
-            <p>Tu destino para los mejores eventos musicales</p>
-        </div>
-        <div class="footer-links">
-            <div class="footer-section">
-                <h4>Soporte</h4>
-                <a href="/pages/contacto.html">Contacto</a>
-            </div>
-            <div class="footer-section">
-                <h4>Síguenos</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Ticketly. Todos los derechos reservados.</p>
-        </div>
-    </div>
-</footer>
-
 </html>

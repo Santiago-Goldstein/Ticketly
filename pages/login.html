@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/headerStyles.css">
     <link rel="stylesheet" href="/css/singUp.css">
+    <link rel="stylesheet" href="/css/menu_box.css">
     <title>Iniciar Sesión</title>
 </head>
 <body>
@@ -33,6 +34,20 @@
             <div class="nav-buttons">
                 <button class="btn-primary" onclick="window.location.href='register.html'">Regístrate</button>
             </div>
+        </div>
+
+        <!-- Botón para mostrar/ocultar el menú -->
+        <button id="toggleMenu" class="menu-btn">☰</button>
+
+        <!-- Menú desplegable -->
+        <div class="menu-box" id="menubox">
+            <ul class="menu-links">
+                <li><a href="/pages/index.html">Inicio</a></li>
+                <li><a href="/pages/nosotros.html">Nosotros</a></li>
+                <li><a href="/pages/contacto.html">Contactate</a></li>
+                <li><a href="/pages/login.html">Iniciar sesión</a></li>
+                <li><a href="/pages/register.html">Regístrarse</a></li>
+            </ul>
         </div>
     </header>
     <main>

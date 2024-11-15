@@ -389,3 +389,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Menu box
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('toggleMenu');
+    const menuBox = document.getElementById('menubox');
+  
+    toggleButton.addEventListener('click', function() {
+      menuBox.classList.toggle('active'); // Alterna la clase 'active' para mostrar/ocultar el menú
+    });
+  });
+  
+  
+  
