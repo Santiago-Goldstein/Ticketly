@@ -16,7 +16,7 @@ body {
 
 .section2 {
     background-color: #2a2d29;
-    color: #e9e9e5;
+    color: #191c18;
     padding: 30px 20px;
 }
 
@@ -108,16 +108,150 @@ body {
     line-height: 1.6;
 }
 
-.btn-primary {
-    padding: 0.6rem;
-    background-color: #e44d5a;
-    border: none;
-    border-radius: 4px;
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(42, 45, 41, 0.8)
+    ),
+    url('../multimedia/fondo1.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     color: #e9e9e5;
-    cursor: pointer;
-    width: 100%;
+    padding-top: 80px;
 }
 
-.btn-primary:hover {
-    background-color: #ca3f4a;
-}
+
+/* CSS para centrar y alinear el contenido */
+
+.section2 {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    padding: 20px;
+    background-color: #191c18; /* Opcional: color de fondo de la sección */
+  }
+
+  .barraHerramientas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .divOrdenar {
+    max-width: 1000px; /* Define el ancho máximo del contenedor */
+    padding: 20px; /* Añade espacio interno */
+    text-align: center; /* Centra el texto */
+    background-color: #524c4c; /* Fondo de la sección * COLOR DE LA/
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(141, 117, 117, 0.1); /* Sombra */
+  }
+
+  .divTitulo h2 {
+    margin-bottom: 10px; /* Espaciado inferior entre el título y el contenido */
+    font-size: 24px; /* Tamaño de fuente del título */
+    color: #f5eaea; /* Color del título */
+  }
+
+  .divTitulo p {
+    line-height: 1.6; /* Ajusta el interlineado para mejor legibilidad */
+    color: #853838;
+    color: #f5eaea; /* Color del texto */
+  }
+
+  /* CSS para los miembros del equipo */
+
+  /* Estilos generales */
+  .team-section {
+    text-align: center;
+    padding: 40px 20px;
+
+  }
+
+  .team-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #f5eaea;
+  }
+
+  .team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .team-member {
+    background-color: #221a3f;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 220px;
+    position: relative;
+  }
+
+  .image-container {
+    position: relative;
+  }
+
+  .team-member img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Estilo para la superposición (overlay) */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Mostrar el overlay al pasar el cursor */
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+
+  .member-info {
+    padding: 15px;
+  }
+
+  .member-info h3 {
+    font-size: 20px;
+    color: #e7d6d6;
+    margin: 10px 0 5px;
+  }
+
+  .member-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+
+  .prueba {
+    text-align: justify;
+    margin: 0 auto;
+  }
