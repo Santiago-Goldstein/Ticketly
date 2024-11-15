@@ -187,19 +187,34 @@ function showCart() {
 
 // Función para proceder al checkout
 function proceedToCheckout() {
-    Swal.fire({
-        title: 'Procesando compra',
-        html: 'Redirigiendo a la pasarela de pago...',
-        timer: 2000,
-        timerProgressBar: true,
-        didOpen: () => {
-            Swal.showLoading();
-        }
-    }).then(() => {
-        // Aquí irías a tu pasarela de pago
-        window.location.href = '/pages/checkout.html';
-    });
+    // Verificar si el usuario está logueado
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (isLoggedIn === "true") {
+        Swal.fire({
+            title: 'Procesando compra',
+            html: 'Redirigiendo a la pasarela de pago...',
+            timer: 2000,
+            timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading();
+            }
+        }).then(() => {
+            // Redirigir al checkout
+            window.location.href = '/pages/checkout.html';
+        });
+    } else {
+        Swal.fire({
+            icon: 'info',
+            title: 'Inicia sesión para proceder',
+            confirmButtonText: 'Ir a login'
+        }).then(() => {
+            // Redirigir al login
+            window.location.href = '/pages/login.html';
+        });
+    }
 }
+
 
 // Event listeners para los botones de compra
 document.addEventListener('DOMContentLoaded', () => {
